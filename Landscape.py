@@ -47,9 +47,23 @@ def Leaf():
         Milly.forward(10)
         Milly.end_fill()
 
+def Cloud():
+    for i in range(20):
+        Milly.color("white")
+        Milly.begin_fill()
+        Milly.circle(i*2)
+        Milly.right(70)
+        Milly.forward(10)
+        Milly.end_fill()
+
 Milly.forward(160)
 Andy.forward(720)
 Leaf()
+Cloud()
+Milly.penup()
+Milly.goto(-225,150)
+Milly.pendown()
+Cloud()
 
 
 turtle.exitonclick()
