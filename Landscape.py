@@ -34,7 +34,7 @@ Milly.shape("turtle")
 Billy.shape("turtle")
 Roger.shape("turtle")
 Andy.speed(900)
-Milly.speed(5)
+Milly.speed(900)
 Billy.speed(900)
 Roger.speed(900)
 
@@ -49,21 +49,43 @@ def Leaf():
 
 def Cloud():
     for i in range(20):
-        Milly.color("white")
-        Milly.begin_fill()
-        Milly.circle(i*2)
-        Milly.right(70)
-        Milly.forward(10)
-        Milly.end_fill()
-
+        Billy.color("white")
+        Billy.begin_fill()
+        Billy.circle(i*2)
+        Billy.right(70)
+        Billy.forward(10)
+        Billy.end_fill()
+def Rogerhouse():
+    for i in range(4):
+        Roger.begin_fill()
+        Roger.forward(70)
+        Roger.right(90)
+        Roger.end_fill()
+def RogerRoof():
+    for i in range(3):
+        Roger.begin_fill()
+        Roger.forward(110)
+        Roger.left(120)
+        Roger.end_fill()
 Milly.forward(160)
 Andy.forward(720)
 Leaf()
 Cloud()
-Milly.penup()
-Milly.goto(-225,150)
-Milly.pendown()
+Billy.penup()
+Billy.goto(-225,150)
+Billy.pendown()
 Cloud()
+Roger.penup()
+Roger.goto(200, -150)
+Roger.pendown()
+Roger.begin_fill()
+Rogerhouse()
+Roger.penup()
+Roger.goto(175,-150)
+Roger.pendown()
+RogerRoof()
+Roger.end_fill()
+
 
 
 turtle.exitonclick()
